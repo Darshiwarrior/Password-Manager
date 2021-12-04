@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Login Credentials
+        </title>
+        <style type="text/css">
+            
+            
+            body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+     background-image: url('palms.jpg');
+                background-repeat: no-repeat;
+                background-size:cover;
+                text-align: center;
+   
+}
+
+.center
+{
+    position: absolute;
+    top: 65%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+
+}
+
+.center h2{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.txtfield
+{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txtfield input{
+    width:100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txtfield label
+{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txtfield span::before{
+    content: '';
+    position: absolute;
+    top:40px;
+    left:0;
+    width: 0%;
+    height: 2px;
+    background-color: #2691d9;
+}
+
+.txtfield input:focus ~ label,
+.txtfield input:valid ~ label{
+    top:-5px;
+    color: #2691d9;
+}
+
+.txtfield input:focus ~ span::before,
+.txtfield input:valid ~ span::before{
+    width: 100%;
+}
+
+.pass
+{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover
+{
+    text-decoration:underline;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height:50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color:#e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline:none;
+}
+input[type="submit"]:hover{
+    border-color: #2691d9;
+    transform: .5s;
+
+}
+
+
+.signuplink
+{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signuplink a{
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signuplink a:hover{
+    text-decoration: underline;
+}
+
+        </style>
+    </head>
+    <body>
+        <h2><a href="gen.jsp">Get A Password with Password Generator</a><h2>
+                <h2><a href="upd.jsp">Update Your Password</a><h2>
+                        <h2><a href="dell.jsp">Delete Your Password</a><h2>
+         <h2><a href="get.jsp">Get Your Password</a><h2>
+                 <h2><a href="getall.jsp">Get All Passwords</a><h2>
+                 
+                         
+        <div class="center">
+            
+            
+            <h2>
+                Store Password
+            </h2>
+           
+            <form method="post" action="psmng.jsp">
+                <div class="txtfield">
+                    <input type="text"  name="aname" required>
+                    <span></span>
+                    <label> Account Name</label>
+                </div>
+                <div class="txtfield">
+                    <input type="password" name="pass" required>
+                    <span>
+                        
+                    </span>
+                    <label> Password</label>
+                </div>
+
+
+                <input type="submit"  value="Save Your Password">
+                
+
+            </form>
+
+        </div>
+ 
+                                  <h2><a href="about.jsp">About Us</a><h2>
+    </body>
+</html>
